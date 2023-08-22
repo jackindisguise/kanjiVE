@@ -1,3 +1,6 @@
+# ignore kanjiVG files
+strokes
+
 # Logs
 logs
 *.log
