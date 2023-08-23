@@ -12,13 +12,6 @@ for(let kanji of jouyouList){
 	let elements = [];
 	let types = [];
 
-	/*
-	// sometimes pure kanji have subelements, handle it beforehand
-	for(let sub of subelements){
-		if(sub.element === kanji)
-			elements = elements.concat(sub.parts)
-	}*/
-
 	// parse kanjiVG data
 	let hex = kanji.charCodeAt().toString(16);
 	let fileName = `${kanjivgDir}/0${hex}.svg`;
@@ -31,13 +24,6 @@ for(let kanji of jouyouList){
 			if(result[1] === kanji) continue;
 			if(elements.indexOf(result[1]) !== -1) continue;
 			elements.push(result[1]);
-
-			/*
-			// custom elements
-			for(let sub of subelements){
-				if(sub.element === result[1])
-					elements = elements.concat(sub.parts)
-			}*/
 		}
 
 		// scrape types for this kanji
