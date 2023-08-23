@@ -1,10 +1,13 @@
 const fs = require("fs");
+const colors = require("colors");
 
 // use jouyou kanji to search for elements
 const jouyou = fs.readFileSync("jouyou.txt", "utf8");
 const jouyouList = jouyou.split("\r\n");
 
 // load kanjivg, store data in JSON
+console.log(`Converting KanjiVG data to JSON.`.cyan)
+console.log(`${">".cyan} Reading ${"Jouyou".blue} kanji data from ${"KanjiVG".green}.`);
 const kanjivgDir = "strokes";
 const outJSON = "kanjivg.json";
 const scraped = [];
@@ -21,17 +24,20 @@ for(let kanji of jouyouList){
 		// scrape elements for this kanji
 		let elementRule = /kvg:element="(.*?)"/g;
 		for(let result=elementRule.exec(data); result; result=elementRule.exec(data)){
-			if(result[1] === kanji) continue;
-			if(elements.indexOf(result[1]) !== -1) continue;
-			elements.push(result[1]);
+			let e = result[1];
+			if(e === "CDP-8BC4") e = "泉";
+			if(e === kanji) continue;
+			if(elements.indexOf(e) !== -1) continue;
+			elements.push(e);
 		}
 
 		// scrape types for this kanji
 		let typeRule = /kvg:type="(.*?)"/g;
 		for(let result=typeRule.exec(data); result; result=typeRule.exec(data)) {
-			if(types.indexOf(result[1]) !== -1) continue;
 			types.push(result[1]);
 		}
+	} else {
+		console.log(`${">".cyan} ${"WARNING".red}: ${"KanjiVG".green} lacks data for ${kanji.red}.`);
 	}
 
 	// push scraped data for this kanji
@@ -39,15 +45,20 @@ for(let kanji of jouyouList){
 }
 
 // sort by element length and types length
+console.log(`${">".cyan} Sorting scraped data by element and type length.`);
 scraped.sort(function(a,b){
 	return (a.elements.length - b.elements.length) || (a.types.length - b.types.length);
 });
 
 // create tab-delimited file
+console.log(`${">".cyan} Generating tab-delimited text file of KanjiVG data.`);
 const outTXT = "kanjivg.txt";
 const text  = [];
 for(let kanji of scraped) text.push(`${kanji.kanji}\t${kanji.elements.join(",")}\t${kanji.types.join(",")}`);
 
 // write files
+console.log(`${">".cyan} Saving ${outJSON.yellow}`);
 fs.writeFileSync(outJSON, JSON.stringify(scraped, null, "\t"));
+
+console.log(`${">".cyan} Saving ${outTXT.yellow}`);
 fs.writeFileSync(outTXT, text.join("\n"));
