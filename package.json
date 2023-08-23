@@ -4,6 +4,7 @@
   "description": "Collection of visual elements of Joyou kanji.",
   "main": "index.js",
   "scripts": {
+	"compile": "node kanjivg2json && node prepare && node kanjive",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
