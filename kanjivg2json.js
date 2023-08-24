@@ -2,15 +2,17 @@ const fs = require("fs");
 const colors = require("colors");
 
 // use jouyou kanji to search for elements
-const jouyou = fs.readFileSync("jouyou.txt", "utf8");
-const jouyouList = jouyou.split("\r\n");
+const jouyouPath = "data/jouyou.txt";
+const jouyouData = fs.readFileSync(jouyouPath, "utf8");
+const jouyouList = jouyouData.split("\r\n");
 
 // load kanjivg, store data in JSON
+const kanjivgDir = "strokes";
+const outJSONPath = "data/kanjivg.json";
+const outTXTPath = "data/kanjivg.txt";
+const scraped = [];
 console.log(`Converting KanjiVG data to JSON.`.cyan)
 console.log(`${">".cyan} Reading ${"Jouyou".blue} kanji data from ${"KanjiVG".green}.`);
-const kanjivgDir = "strokes";
-const outJSON = "kanjivg.json";
-const scraped = [];
 for(let kanji of jouyouList){
 	let elements = [];
 	let types = [];
@@ -25,7 +27,7 @@ for(let kanji of jouyouList){
 		let elementRule = /kvg:element="(.*?)"/g;
 		for(let result=elementRule.exec(data); result; result=elementRule.exec(data)){
 			let e = result[1];
-			if(e === "CDP-8BC4") e = "泉";
+			if(e === "CDP-8BC4") e = "泉"; // not correct but close to correct
 			if(e === kanji) continue;
 			if(elements.indexOf(e) !== -1) continue;
 			elements.push(e);
@@ -45,20 +47,19 @@ for(let kanji of jouyouList){
 }
 
 // sort by element length and types length
-console.log(`${">".cyan} Sorting scraped data by element and type length.`);
+console.log(`${">".cyan} Sorting kanji by element and type length.`);
 scraped.sort(function(a,b){
 	return (a.elements.length - b.elements.length) || (a.types.length - b.types.length);
 });
 
 // create tab-delimited file
 console.log(`${">".cyan} Generating tab-delimited text file of KanjiVG data.`);
-const outTXT = "kanjivg.txt";
 const text  = [];
 for(let kanji of scraped) text.push(`${kanji.kanji}\t${kanji.elements.join(",")}\t${kanji.types.join(",")}`);
 
 // write files
-console.log(`${">".cyan} Saving ${outJSON.yellow}`);
-fs.writeFileSync(outJSON, JSON.stringify(scraped, null, "\t"));
+console.log(`${">".cyan} Saving ${outJSONPath.yellow}`);
+fs.writeFileSync(outJSONPath, JSON.stringify(scraped, null, "\t"));
 
-console.log(`${">".cyan} Saving ${outTXT.yellow}`);
-fs.writeFileSync(outTXT, text.join("\n"));
+console.log(`${">".cyan} Saving ${outTXTPath.yellow}`);
+fs.writeFileSync(outTXTPath, text.join("\n"));

@@ -1,10 +1,11 @@
 const fs = require("fs");
 const colors = require("colors");
-const kanjivg = require("./kanjivg.json");
-const subs = require("./sub.json");
-const types = require("./type.json");
-const outJSON = "kanjive.json";
-const outTXT = "kanjive.txt";
+const repl = require("./ext").repl;
+const kanjivg = require("./data/kanjivg.json");
+const subs = require("./data/sub.json");
+const types = require("./data/type.json");
+const outJSON = "data/kanjive.json";
+const outTXT = "data/kanjive.txt";
 
 console.log(`Add visual elements not tracked by KanjiVG.`.cyan)
 {
@@ -31,6 +32,7 @@ console.log(`Add visual elements not tracked by KanjiVG.`.cyan)
 
 		// check each element for custom constituent parts
 		for(let element of kanji.elements){
+			if(element === "丶") continue; // ignore this...
 			newElements.push(element);
 			for(let _element of subs){
 				if(_element.element === element){
@@ -41,7 +43,7 @@ console.log(`Add visual elements not tracked by KanjiVG.`.cyan)
 		}
 
 		// replace
-		kanji.elements = newElements;
+		kanji.elements = [...new Set(newElements)];
 	}
 
 	for(let sub of subs){
@@ -67,7 +69,7 @@ console.log(`Add visual elements not tracked by KanjiVG.`.cyan)
 			kanji.elements = [...new Set(kanji.elements)]; // protect against duplicates
 		}
 
-		console.log(`${">".cyan} ${type.element.red} (${type.types.join("").magenta}): found ${found[type.element]||0} ${(found[type.element]||0) == 1 ? "instance" : "instances"}.`)
+		console.log(`${">".cyan} ${type.element.red} (${repl(type.types, function(v){return v.blue}).join(">")}): found ${found[type.element]||0} ${(found[type.element]||0) == 1 ? "instance" : "instances"}.`)
 	}
 }
 
