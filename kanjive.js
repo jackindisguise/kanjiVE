@@ -152,7 +152,7 @@ while(kanjive.length < kanjivg.length){
 		let doAdd = true;
 		for(let part of kanji.elements){
 			if(elementOnly.contains(part)) continue; // don't worry about element-only elements
-			if(!found.contains(part)) doAdd = false; // this kanji has kanji elements that haven't been introduced yet
+			if(!found.contains(part)) { doAdd = false; break; } // this kanji has kanji elements that haven't been introduced yet
 		}
 
 		if(doAdd){
@@ -162,13 +162,12 @@ while(kanjive.length < kanjivg.length){
 	}
 }
 
-let lines = [];
-for(let kanji of kanjive){
-	lines.push(`${kanji.kanji}\t${kanji.elements.join(",")}\t${kanji.types.join(",")}`)
-}
-
-console.log(`${cArrow} Saving ${outTXT.yellow}`);
-fs.writeFileSync(outTXT, lines.join("\n"));
-
+// write JSON file
 console.log(`${cArrow} Saving ${outJSON.yellow}`);
 fs.writeFileSync(outJSON, JSON.stringify(kanjive, null, "\t"));
+
+// create tab-delimited text file
+let lines = [];
+for(let kanji of kanjive) lines.push(`${kanji.kanji}\t${kanji.elements.join(",")}\t${kanji.types.join(",")}`)
+console.log(`${cArrow} Saving ${outTXT.yellow}`);
+fs.writeFileSync(outTXT, lines.join("\n"));
