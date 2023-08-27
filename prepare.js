@@ -1,30 +1,57 @@
 const fs = require("fs");
 const colors = require("colors");
-const subPath = "data/sub.txt";
-const sub = fs.readFileSync(subPath, "utf8");
-const subJSONPath = "data/sub.json";
-const typePath = "data/type.txt";
-const type = fs.readFileSync(typePath, "utf8");
-const typeJSONPath = "data/type.json";
-const elements = [];
-const types = [];
+require("./ext");
+const cArrow = ` ${">".cyan}`;
 
-// convert sub.txt to sub.json
-console.log(`Converting custom element association data to JSON.`.cyan)
-console.log(`${">".cyan} Parsing ${subPath.yellow}`);
-for(let line of sub.split("\r\n")){
+// convert element.txt to element.json
+const subPath = "data/element.txt";
+const sub = fs.readFileSync(subPath, "utf8");
+const subJSONPath = "data/element.json";
+const elements = [];
+const elementSearch = {};
+console.log(`Converting custom element association data to JSON.`.cyan);
+console.log(`${cArrow} Parsing ${subPath.yellow}`);
+let subSplit = sub.split("\r\n");
+for(let i=0;i<subSplit.length;i++){
+	let line = subSplit[i];
 	let fields = line.split("\t");
 	let element = fields[0];
 	let subelements = fields[1].split(",");
-	elements.push({element:element, parts:subelements});
+	if(!elementSearch[element]){
+		let entry = {element:element, parts:subelements}
+		elements.push(entry);
+		elementSearch[element] = entry;
+	} else {
+		console.log(`${"WARNING".red.bold}: Duplicate entry for ${element.red}.`)
+		elementSearch[element].parts.pushArray(subelements);
+	}
 }
 
-console.log(`${">".cyan} Saving ${subJSONPath.yellow}`);
+// handle recursive element inclusion
+function include(array, part){
+	if(elementSearch[part]){
+		array.push(part);
+		for(let _part of elementSearch[part].parts) include(array, _part);
+	} else array.push(part);
+}
+
+console.log(`${cArrow} Recursive inclusion of parts.`);
+for(let element of elements){
+	let safe = [];
+	for(let part of element.parts) include(safe, part);
+	element.parts = safe;
+}
+
+console.log(`${cArrow} Saving ${subJSONPath.yellow}`);
 fs.writeFileSync(subJSONPath, JSON.stringify(elements, null, "\t"));
 
 // convert type.txt to type.json
+const typePath = "data/type.txt";
+const type = fs.readFileSync(typePath, "utf8");
+const typeJSONPath = "data/type.json";
+const types = [];
 console.log(`Converting custom stroke type association data to JSON.`.cyan)
-console.log(`${">".cyan} Parsing ${typePath.yellow}`);
+console.log(`${cArrow} Parsing ${typePath.yellow}`);
 for(let line of type.split("\r\n")){
 	let fields = line.split("\t");
 	let element = fields[0];
@@ -32,5 +59,19 @@ for(let line of type.split("\r\n")){
 	types.push({element:element, types:strokes});
 }
 
-console.log(`${">".cyan} Saving ${typeJSONPath.yellow}`);
+console.log(`${cArrow} Saving ${typeJSONPath.yellow}`);
 fs.writeFileSync(typeJSONPath, JSON.stringify(types, null, "\t"));
+
+const orderPath = "data/order.txt";
+const orderData = fs.readFileSync(orderPath, "utf8");
+const orderJSONPath = "data/order.json";
+const order = {};
+console.log(`Converting customer order data to JSON.`.cyan);
+console.log(`${cArrow} Parsing ${orderPath.yellow}`);
+for(let line of orderData.split("\r\n")){
+	let fields = line.split("\t");
+	order[fields[0]] = fields[1];
+}
+
+console.log(`${cArrow} Saving ${orderJSONPath.yellow}`);
+fs.writeFileSync(orderJSONPath, JSON.stringify(order, null, "\t"));

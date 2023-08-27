@@ -4,11 +4,11 @@
   "description": "Collection of visual elements of Joyou kanji.",
   "main": "index.js",
   "scripts": {
-    "compile": "node kanjivg2json && node prepare && node kanjive",
+    "compile": "node kanjivg2json && node prepare && node kanjive && node anki",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "GPL-3.0",
+  "license": "CC-BY-SA-4.0",
   "dependencies": {
     "colors": "^1.4.0"
   }

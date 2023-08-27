@@ -1,5 +1,6 @@
 const fs = require("fs");
 const colors = require("colors");
+const cArrow = ` ${">".cyan}`;
 
 // use jouyou kanji to search for elements
 const jouyouPath = "data/jouyou.txt";
@@ -12,7 +13,7 @@ const outJSONPath = "data/kanjivg.json";
 const outTXTPath = "data/kanjivg.txt";
 const scraped = [];
 console.log(`Converting KanjiVG data to JSON.`.cyan)
-console.log(`${">".cyan} Reading ${"Jouyou".blue} kanji data from ${"KanjiVG".green}.`);
+console.log(`${cArrow} Reading ${"Jouyou".blue} kanji data from ${"KanjiVG".green}.`);
 for(let kanji of jouyouList){
 	let elements = [];
 	let types = [];
@@ -39,7 +40,7 @@ for(let kanji of jouyouList){
 			types.push(result[1]);
 		}
 	} else {
-		console.log(`${">".cyan} ${"WARNING".red}: ${"KanjiVG".green} lacks data for ${kanji.red}.`);
+		console.log(`${cArrow} ${"WARNING".red}: ${"KanjiVG".green} lacks data for ${kanji.red}.`);
 	}
 
 	// push scraped data for this kanji
@@ -47,19 +48,21 @@ for(let kanji of jouyouList){
 }
 
 // sort by element length and types length
-console.log(`${">".cyan} Sorting kanji by element and type length.`);
+console.log(`${cArrow} Sorting kanji by element and type length.`);
 scraped.sort(function(a,b){
 	return (a.elements.length - b.elements.length) || (a.types.length - b.types.length);
 });
 
 // create tab-delimited file
-console.log(`${">".cyan} Generating tab-delimited text file of KanjiVG data.`);
+console.log(`${cArrow} Generating tab-delimited text file of KanjiVG data.`);
 const text  = [];
-for(let kanji of scraped) text.push(`${kanji.kanji}\t${kanji.elements.join(",")}\t${kanji.types.join(",")}`);
+for(let kanji of scraped){
+	text.push(`${kanji.kanji}\t${kanji.elements.join(",")}\t${kanji.types.join(",")}`);
+}
 
 // write files
-console.log(`${">".cyan} Saving ${outJSONPath.yellow}`);
+console.log(`${cArrow} Saving ${outJSONPath.yellow}`);
 fs.writeFileSync(outJSONPath, JSON.stringify(scraped, null, "\t"));
 
-console.log(`${">".cyan} Saving ${outTXTPath.yellow}`);
+console.log(`${cArrow} Saving ${outTXTPath.yellow}`);
 fs.writeFileSync(outTXTPath, text.join("\n"));
