@@ -18,6 +18,24 @@ const jouyouJSONPath = "data/jouyou.json";
 console.log(`${cArrow} Saving ${jouyouJSONPath.yellow}`);
 fs.writeFileSync(jouyouJSONPath, JSON.stringify(jouyouList));
 
+// convert keywords.txt to keywords.json
+const keywordsPath = "data/keywords.txt";
+const keywordsJSONPath = "data/keywords.json";
+const keywordsData = fs.readFileSync(keywordsPath, "utf8");
+const keywordsLines = keywordsData.split("\r\n");
+const keywords = {};
+const _keywords = {};
+console.log(`Converting keyword data to JSON.`.cyan);
+console.log(`${cArrow} Parsing ${keywordsPath.yellow}`);
+for(let line of keywordsLines){
+	let fields = line.split("\t");
+	if(_keywords[fields[1]]) console.log(`${cArrow} ${"WARNING".red.bold}: Duplicate keyword ${fields[1].blue} (${fields[0].blue} and ${_keywords[fields[1]].blue})`);
+	keywords[fields[0]] = fields[1];
+	_keywords[fields[1]] = fields[0];
+}
+console.log(`${cArrow} Saving ${keywordsJSONPath.yellow}`);
+fs.writeFileSync(keywordsJSONPath, JSON.stringify(keywords));
+
 // convert element.txt to element.json
 const subPath = "data/element.txt";
 const sub = fs.readFileSync(subPath, "utf8");
@@ -90,3 +108,17 @@ for(let line of orderData.split("\r\n")){
 
 console.log(`${cArrow} Saving ${orderJSONPath.yellow}`);
 fs.writeFileSync(orderJSONPath, JSON.stringify(order, null, "\t"));
+
+const frequencyPath = "data/frequency.txt";
+const frequencyData = fs.readFileSync(frequencyPath, "utf8");
+const frequencyJSONPath = "data/frequency.json";
+const frequency = {};
+console.log(`Converting frequency data to JSON.`.cyan);
+console.log(`${cArrow} Parsing ${frequencyPath.yellow}`);
+for(let line of frequencyData.split("\r\n")){
+	let fields = line.split("\t");
+	frequency[fields[0]] = Number(fields[1]);
+}
+
+console.log(`${cArrow} Saving ${frequencyJSONPath.yellow}`);
+fs.writeFileSync(frequencyJSONPath, JSON.stringify(frequency, null, "\t"));
