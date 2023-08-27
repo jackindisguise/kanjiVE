@@ -1,20 +1,21 @@
+// node includes
 const fs = require("fs");
+
+// npm includes
 const colors = require("colors");
+
+// local constants
 const cArrow = ` ${">".cyan}`;
 
-// use jouyou kanji to search for elements
-const jouyouPath = "data/jouyou.txt";
-const jouyouData = fs.readFileSync(jouyouPath, "utf8");
-const jouyouList = jouyouData.split("\r\n");
-
-// load kanjivg, store data in JSON
+// load kanjivg files, parse and store data in JSON
+// jouyou kanji act as the basis of project
+const jouyou = require("./data/jouyou.json");
 const kanjivgDir = "strokes";
 const outJSONPath = "data/kanjivg.json";
-const outTXTPath = "data/kanjivg.txt";
 const scraped = [];
 console.log(`Converting KanjiVG data to JSON.`.cyan)
 console.log(`${cArrow} Reading ${"Jouyou".blue} kanji data from ${"KanjiVG".green}.`);
-for(let kanji of jouyouList){
+for(let kanji of jouyou){
 	let elements = [];
 	let types = [];
 
@@ -48,21 +49,19 @@ for(let kanji of jouyouList){
 }
 
 // sort by element length and types length
-console.log(`${cArrow} Sorting kanji by element and type length.`);
+console.log(`${cArrow} Sorting kanji by element and types length.`);
 scraped.sort(function(a,b){
 	return (a.elements.length - b.elements.length) || (a.types.length - b.types.length);
 });
 
-// create tab-delimited file
-console.log(`${cArrow} Generating tab-delimited text file of KanjiVG data.`);
-const text  = [];
-for(let kanji of scraped){
-	text.push(`${kanji.kanji}\t${kanji.elements.join(",")}\t${kanji.types.join(",")}`);
-}
 
-// write files
+// write JSON file
 console.log(`${cArrow} Saving ${outJSONPath.yellow}`);
 fs.writeFileSync(outJSONPath, JSON.stringify(scraped, null, "\t"));
 
+// create tab-delimited text file
+const outTXTPath = "data/kanjivg.txt";
+const lines  = [];
+for(let kanji of scraped) lines.push(`${kanji.kanji}\t${kanji.elements.join(",")}\t${kanji.types.join(",")}`);
 console.log(`${cArrow} Saving ${outTXTPath.yellow}`);
-fs.writeFileSync(outTXTPath, text.join("\n"));
+fs.writeFileSync(outTXTPath, lines.join("\n"));

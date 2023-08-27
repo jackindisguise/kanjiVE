@@ -1,11 +1,18 @@
+// node includes
 const fs = require("fs");
+
+// npm includes
 const colors = require("colors");
-const cArrow = ` ${">".cyan}`;
+
+// local includes
 require("./ext");
 const kanjivg = require("./data/kanjivg.json");
 const subs = require("./data/element.json");
 const types = require("./data/type.json");
 const order = require("./data/order.json");
+
+// local constants
+const cArrow = ` ${">".cyan}`;
 const outJSON = "data/kanjive.json";
 const outTXT = "data/kanjive.txt";
 

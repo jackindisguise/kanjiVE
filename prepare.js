@@ -1,7 +1,22 @@
+// node includes
 const fs = require("fs");
+
+// local includes
 const colors = require("colors");
 require("./ext");
+
+// local constants
 const cArrow = ` ${">".cyan}`;
+
+// convert jouyou.txt to jouyou.json
+const jouyouPath = "data/jouyou.txt";
+console.log(`Converting Jouyou data to JSON.`.cyan);
+console.log(`${cArrow} Parsing ${jouyouPath.yellow}`);
+const jouyouData = fs.readFileSync(jouyouPath, "utf8");
+const jouyouList = jouyouData.split("\r\n");
+const jouyouJSONPath = "data/jouyou.json";
+console.log(`${cArrow} Saving ${jouyouJSONPath.yellow}`);
+fs.writeFileSync(jouyouJSONPath, JSON.stringify(jouyouList));
 
 // convert element.txt to element.json
 const subPath = "data/element.txt";

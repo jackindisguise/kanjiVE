@@ -1,6 +1,7 @@
 /** Overloads array functions. Not safe. */
 
 // iterates over the provided array, calling a function that returns a value that will replace the existing value in that position.
+// returns a new array
 Array.prototype.replace = function(fun){
 	let replaced = [];
 	for(let i=0;i<this.length;i++){
