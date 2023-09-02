@@ -15,12 +15,12 @@ const outJSONPath = "data/kanjivg.json";
 const scraped = [];
 console.log(`Converting KanjiVG data to JSON.`.cyan)
 console.log(`${cArrow} Reading ${"Jouyou".blue} kanji data from ${"KanjiVG".green}.`);
-for(let kanji of jouyou){
+for(let kanji of jouyou.kanji){
 	let elements = [];
 	let types = [];
 
 	// parse kanjiVG data
-	let hex = kanji.charCodeAt().toString(16);
+	let hex = kanji.kanji.charCodeAt().toString(16);
 	let fileName = `${kanjivgDir}/0${hex}.svg`;
 	if(fs.existsSync(fileName)){
 		let data = fs.readFileSync(fileName, "utf8");
@@ -30,7 +30,7 @@ for(let kanji of jouyou){
 		for(let result=elementRule.exec(data); result; result=elementRule.exec(data)){
 			let e = result[1];
 			if(e === "CDP-8BC4") e = "泉"; // not correct but close to correct
-			if(e === kanji) continue;
+			if(e === kanji.kanji) continue;
 			if(elements.indexOf(e) !== -1) continue;
 			elements.push(e);
 		}
@@ -45,7 +45,7 @@ for(let kanji of jouyou){
 	}
 
 	// push scraped data for this kanji
-	scraped.push({kanji:kanji, elements:elements, types:types});
+	scraped.push({kanji:kanji.kanji, elements:elements, types:types});
 }
 
 // sort by element length and types length

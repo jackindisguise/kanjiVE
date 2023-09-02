@@ -151,7 +151,7 @@ while(kanjive.length < kanjivg.length){
 		if(found.contains(kanji.kanji)) continue; // ignore found kanji
 		let doAdd = true;
 		for(let part of kanji.elements){
-			if(elementOnly.contains(part)) continue; // don't worry about element-only elements
+			if(elementOnly.contains(part)) { continue; } // don't worry about element-only elements
 			if(!found.contains(part)) { doAdd = false; break; } // this kanji has kanji elements that haven't been introduced yet
 		}
 
@@ -185,7 +185,7 @@ fs.writeFileSync(outTXT, lines.join("\n"));
 			if(elementsSearch[element]) {
 				elementsSearch[element].appearances.push(kanji.kanji);
 			} else {
-				elementsSearch[element] = {element:element, isJouyouKanji:jouyou.contains(element), appearances:[kanji.kanji]};
+				elementsSearch[element] = {element:element, isJouyouKanji:jouyou.plain.contains(element), appearances:[kanji.kanji]};
 				elements.push(elementsSearch[element]);
 			}
 		}
