@@ -55,7 +55,7 @@ const kanjive = require("./data/kanjive.json");
 			"| Element | Kanji |",
 			"| - | - |"
 		];
-		for(let element of elements) if(element.isJouyouKanji) lines.push(`| ${element.element} | ${element.appearances.replace(function(a){return "`"+a+"`";}).join(" ")} |`);
+		for(let element of elements) if(!element.isJouyouKanji) lines.push(`| ${element.element} | ${element.appearances.replace(function(a){return "`"+a+"`";}).join(" ")} |`);
 		sections.push(lines.join("\n"));
 	}
 
