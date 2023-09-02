@@ -7,7 +7,7 @@ const colors = require("colors");
 // local includes
 require("./ext");
 const kanjivg = require("./data/kanjivg.json");
-const subs = require("./data/element.json");
+const assocs = require("./data/associations.json");
 const types = require("./data/type.json");
 const order = require("./data/order.json");
 
@@ -18,8 +18,8 @@ const outTXT = "data/kanjive.txt";
 
 console.log(`Add visual elements not tracked by KanjiVG.`.cyan)
 {
-	// use separately compiled data to add new visual elements to kanji
-	console.log(`${cArrow} Adding custom elements using other elements.`);
+	// use separately compiled data to associate visual elements to kanji
+	console.log(`${cArrow} Adding manual kanji associations.`);
 	const found = {};
 	function find(element){
 		if(!found[element.element]) found[element.element] = 1;
@@ -31,7 +31,7 @@ console.log(`Add visual elements not tracked by KanjiVG.`.cyan)
 		let newElements = [];
 
 		// check if this kanji has custom constituent parts
-		for(let element of subs){
+		for(let element of assocs){
 			if(element.element === kanji.kanji){
 				newElements = newElements.concat(element.parts);
 				find(element);
@@ -43,7 +43,7 @@ console.log(`Add visual elements not tracked by KanjiVG.`.cyan)
 			//if(element === "丶") continue; // ignore this...
 			if(kanji.kanji === "滝" && element === "龍") continue; // weird case
 			newElements.push(element);
-			for(let _element of subs){
+			for(let _element of assocs){
 				if(_element.element === element){
 					newElements = newElements.concat(_element.parts);
 					find(_element);
@@ -55,7 +55,7 @@ console.log(`Add visual elements not tracked by KanjiVG.`.cyan)
 		kanji.elements = [...new Set(newElements)];
 	}
 
-	for(let sub of subs){
+	for(let sub of assocs){
 		console.log(`${cArrow} ${sub.element.red} (${sub.parts.join("").magenta}): found ${found[sub.element]||0} ${(found[sub.element]||0) == 1 ? "instance" : "instances"}.`)
 	}
 }
@@ -171,3 +171,36 @@ let lines = [];
 for(let kanji of kanjive) lines.push(`${kanji.kanji}\t${kanji.elements.join(",")}\t${kanji.types.join(",")}`)
 console.log(`${cArrow} Saving ${outTXT.yellow}`);
 fs.writeFileSync(outTXT, lines.join("\n"));
+
+{
+	// save element data separately
+	console.log(`${cArrow} Tracking element usage data.`);
+	const jouyou = require("./data/jouyou.json");
+	const elementsTXT = "data/elements.txt";
+	const elementsJSON = "data/elements.json";
+	const elements = [];
+	const elementsSearch = {};
+	for(let kanji of kanjive) {
+		for(let element of kanji.elements) {
+			if(elementsSearch[element]) {
+				elementsSearch[element].appearances.push(kanji.kanji);
+			} else {
+				elementsSearch[element] = {element:element, isJouyouKanji:jouyou.contains(element), appearances:[kanji.kanji]};
+				elements.push(elementsSearch[element]);
+			}
+		}
+	}
+
+	console.log(`${cArrow} Sorting element list descending by appearance count.`);
+	elements.sort(function(a,b){
+		return b.appearances.length - a.appearances.length;
+	})
+
+	console.log(`${cArrow} Saving ${elementsJSON.yellow}`);
+	fs.writeFileSync(elementsJSON, JSON.stringify(elements, null, "\t"));
+
+	const lines = [];
+	for(let element of elements) lines.push(`${element.element}\t${element.appearances}`);
+	console.log(`${cArrow} Saving ${elementsTXT.yellow}`);
+	fs.writeFileSync(elementsTXT, lines.join("\n"));
+}

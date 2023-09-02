@@ -199,18 +199,6 @@
 		]
 	},
 	{
-		"element": "マ",
-		"parts": [
-			"㇇"
-		]
-	},
-	{
-		"element": "禸",
-		"parts": [
-			"厶"
-		]
-	},
-	{
 		"element": "𠮟",
 		"parts": [
 			"口",
@@ -310,6 +298,18 @@
 		"element": "面",
 		"parts": [
 			"而"
+		]
+	},
+	{
+		"element": "マ",
+		"parts": [
+			"㇇"
+		]
+	},
+	{
+		"element": "禸",
+		"parts": [
+			"厶"
 		]
 	}
 ]

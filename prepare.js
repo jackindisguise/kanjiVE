@@ -9,14 +9,25 @@ require("./ext");
 const cArrow = ` ${">".cyan}`;
 
 // convert jouyou.txt to jouyou.json
-const jouyouPath = "data/jouyou.txt";
-console.log(`Converting Jouyou data to JSON.`.cyan);
-console.log(`${cArrow} Parsing ${jouyouPath.yellow}`);
-const jouyouData = fs.readFileSync(jouyouPath, "utf8");
-const jouyouList = jouyouData.split("\r\n");
-const jouyouJSONPath = "data/jouyou.json";
-console.log(`${cArrow} Saving ${jouyouJSONPath.yellow}`);
-fs.writeFileSync(jouyouJSONPath, JSON.stringify(jouyouList));
+{
+	const jouyouPath = "data/jouyou.txt";
+	console.log(`Converting Jouyou data to JSON.`.cyan);
+	console.log(`${cArrow} Parsing ${jouyouPath.yellow}`);
+	const jouyouData = fs.readFileSync(jouyouPath, "utf8");
+	const jouyouList = jouyouData.split("\r\n");
+	const formatted = [];
+	const plain = [];
+	for(let jouyou of jouyouList){
+		let fields = jouyou.split("\t");
+		let kanji = fields[0];
+		let grade = fields[1];
+		formatted.push({kanji: kanji, grade: grade === "S" ? grade : Number(grade)});
+		plain.push(kanji);
+	}
+	const jouyouJSONPath = "data/jouyou.json";
+	console.log(`${cArrow} Saving ${jouyouJSONPath.yellow}`);
+	fs.writeFileSync(jouyouJSONPath, JSON.stringify({kanji:formatted, plain:plain}, null, "\t"));
+}
 
 // convert keywords.txt to keywords.json
 const keywordsPath = "data/keywords.txt";
@@ -36,15 +47,15 @@ for(let line of keywordsLines){
 console.log(`${cArrow} Saving ${keywordsJSONPath.yellow}`);
 fs.writeFileSync(keywordsJSONPath, JSON.stringify(keywords));
 
-// convert element.txt to element.json
-const subPath = "data/element.txt";
-const sub = fs.readFileSync(subPath, "utf8");
-const subJSONPath = "data/element.json";
+// convert associations.txt to associations.json
+const assocPath = "data/associations.txt";
+const assoc = fs.readFileSync(assocPath, "utf8");
+const assocJSONPath = "data/associations.json";
 const elements = [];
 const elementSearch = {};
 console.log(`Converting custom element association data to JSON.`.cyan);
-console.log(`${cArrow} Parsing ${subPath.yellow}`);
-let subSplit = sub.split("\r\n");
+console.log(`${cArrow} Parsing ${assocPath.yellow}`);
+let subSplit = assoc.split("\r\n");
 for(let i=0;i<subSplit.length;i++){
 	let line = subSplit[i];
 	let fields = line.split("\t");
@@ -75,8 +86,8 @@ for(let element of elements){
 	element.parts = safe;
 }
 
-console.log(`${cArrow} Saving ${subJSONPath.yellow}`);
-fs.writeFileSync(subJSONPath, JSON.stringify(elements, null, "\t"));
+console.log(`${cArrow} Saving ${assocJSONPath.yellow}`);
+fs.writeFileSync(assocJSONPath, JSON.stringify(elements, null, "\t"));
 
 // convert type.txt to type.json
 const typePath = "data/type.txt";
@@ -122,3 +133,17 @@ for(let line of frequencyData.split("\r\n")){
 
 console.log(`${cArrow} Saving ${frequencyJSONPath.yellow}`);
 fs.writeFileSync(frequencyJSONPath, JSON.stringify(frequency, null, "\t"));
+
+const gradePath = "data/grade.txt";
+const gradeData = fs.readFileSync(gradePath, "utf8");
+const gradeJSONPath = "data/grade.json";
+const grade = {};
+console.log(`Converting grade data to JSON.`.cyan);
+console.log(`${cArrow} Parsing ${gradePath.yellow}`);
+for(let line of gradeData.split("\r\n")){
+	let fields = line.split("\t");
+	grade[fields[0]] = Number(fields[1]);
+}
+
+console.log(`${cArrow} Saving ${gradeJSONPath.yellow}`);
+fs.writeFileSync(gradeJSONPath, JSON.stringify(grade, null, "\t"));

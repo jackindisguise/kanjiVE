@@ -1,5 +1,3 @@
-**All data based on analyzing 2136 Jouyou kanji.**
-
 # Kanji Elements
 * Sorted by number of kanji elements first and total elements second.
 
