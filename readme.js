@@ -123,7 +123,7 @@ const kanjive = require("./data/kanjive.json");
 		console.log(`${cArrow} Generating ${jouyouMD.blue} table: ${table.yellow}`);
 		let safe = [];
 		let a = 0;
-		for(let kanji of jouyou.kanji) if(kanji.grade === (i===6?"S":i+1)) { safe.push(`\`${kanji.kanji}\``); a++; }
+		for(let kanji of jouyou.kanji) if(kanji.grade === i+1) { safe.push(`\`${kanji.kanji}\``); a++; }
 		let lines = [
 			`## ${table}`,
 			`* ${a} out of 2136 Jouyou kanji. (${c+a})`,

@@ -21,7 +21,8 @@ const cArrow = ` ${">".cyan}`;
 		let fields = jouyou.split("\t");
 		let kanji = fields[0];
 		let grade = fields[1];
-		formatted.push({kanji: kanji, grade: grade === "S" ? grade : Number(grade)});
+		let freq = Number(fields[2]);
+		formatted.push({kanji:kanji, grade:Number(grade), frequency:freq});
 		plain.push(kanji);
 	}
 	const jouyouJSONPath = "data/jouyou.json";
@@ -110,7 +111,7 @@ const orderPath = "data/order.txt";
 const orderData = fs.readFileSync(orderPath, "utf8");
 const orderJSONPath = "data/order.json";
 const order = {};
-console.log(`Converting customer order data to JSON.`.cyan);
+console.log(`Converting custom order data to JSON.`.cyan);
 console.log(`${cArrow} Parsing ${orderPath.yellow}`);
 for(let line of orderData.split("\r\n")){
 	let fields = line.split("\t");
@@ -120,30 +121,26 @@ for(let line of orderData.split("\r\n")){
 console.log(`${cArrow} Saving ${orderJSONPath.yellow}`);
 fs.writeFileSync(orderJSONPath, JSON.stringify(order, null, "\t"));
 
-const frequencyPath = "data/frequency.txt";
-const frequencyData = fs.readFileSync(frequencyPath, "utf8");
-const frequencyJSONPath = "data/frequency.json";
-const frequency = {};
-console.log(`Converting frequency data to JSON.`.cyan);
-console.log(`${cArrow} Parsing ${frequencyPath.yellow}`);
-for(let line of frequencyData.split("\r\n")){
+// convert names.txt to names.json
+const namesPath = "data/names.txt";
+const namesData = fs.readFileSync(namesPath, "utf8");
+const namesJSONPath = "data/names.json";
+const names = [];
+console.log(`Converting element name data to JSON.`.cyan);
+console.log(`${cArrow} Parsing ${namesPath.yellow}`);
+for(let line of namesData.split("\n")){
 	let fields = line.split("\t");
-	frequency[fields[0]] = Number(fields[1]);
+	let element = fields[0];
+	let _names = fields[1].split("; ");
+	_names.sort(function(a,b){
+		let aWeight = 0;
+		if(a.indexOf("radical")!==-1) aWeight += 10;
+		let bWeight = 0;
+		if(b.indexOf("radical")!==-1) bWeight += 10;
+		return bWeight - aWeight;
+	});
+	names.push({element:element, names:_names});
 }
 
-console.log(`${cArrow} Saving ${frequencyJSONPath.yellow}`);
-fs.writeFileSync(frequencyJSONPath, JSON.stringify(frequency, null, "\t"));
-
-const gradePath = "data/grade.txt";
-const gradeData = fs.readFileSync(gradePath, "utf8");
-const gradeJSONPath = "data/grade.json";
-const grade = {};
-console.log(`Converting grade data to JSON.`.cyan);
-console.log(`${cArrow} Parsing ${gradePath.yellow}`);
-for(let line of gradeData.split("\r\n")){
-	let fields = line.split("\t");
-	grade[fields[0]] = Number(fields[1]);
-}
-
-console.log(`${cArrow} Saving ${gradeJSONPath.yellow}`);
-fs.writeFileSync(gradeJSONPath, JSON.stringify(grade, null, "\t"));
+console.log(`${cArrow} Saving ${namesJSONPath.yellow}`);
+fs.writeFileSync(namesJSONPath, JSON.stringify(names, null, "\t"));

@@ -113,35 +113,44 @@ function getKanji(kanji){
 	}
 }
 
-function addDerivatives(kanji){
+function addDerivatives(kanji, level){
+	let has = false;
 	for(let sKanji of kanjivg){
 		if(found.contains(sKanji.kanji)) continue; // kanji is found already
 		if(!sKanji.elements.contains(kanji.kanji)) continue; // must contain this kanji as an element
 
 		// ensure this kanji only has found elements
 		let skip = false;
-		let elementsLeft = sKanji.elements.length;
+		let _f = [];
 		for(let element of sKanji.elements) {
 			if(elementOnly.contains(element)) continue; // don't skip element-only elements
-			if(found.contains(element)) { elementsLeft--; continue; } // it's a kanji element that was found, don't skip
+			if(found.contains(element)) { _f.push(element); continue; } // it's a kanji element that was found, don't skip
 			skip = true;
 		}
 
 		if(skip) continue;
-		add(sKanji);
+		else if(!has) {
+			has = true;
+			//console.log(`${"-> ".repeat(level)}Adding derivatives of ${kanji.kanji.red.bold}`);
+		}
+		
+		add(sKanji, level+1);
 	}
 }
 
 // adds this kanji and any kanji that are derivatives of it
-function add(kanji){
-	if(!kanjive.contains(kanji)) kanjive.push(kanji);
+function add(kanji, level){
+	if(!kanjive.contains(kanji)) {
+		//console.log(`${"-> ".repeat(level?level:1)}Adding ${kanji.kanji.yellow.bold}`)
+		kanjive.push(kanji);
+	}
 	if(!found.contains(kanji.kanji)) found.push(kanji.kanji);
-	addDerivatives(kanji);
+	addDerivatives(kanji, level?level+1:1);
 
 	// if there's a pre-determined order, add the next in the order
 	if(order[kanji.kanji] && !found.contains(order[kanji.kanji])) {
-		console.log(`${cArrow} Respecting pre-determined order: ${kanji.kanji.red} > ${order[kanji.kanji].red}`)
-		add(getKanji(order[kanji.kanji]));
+		//console.log(`${cArrow} Respecting pre-determined order: ${kanji.kanji.red} > ${order[kanji.kanji].red}`)
+		add(getKanji(order[kanji.kanji]), level?level:1);
 	}
 }
 

@@ -1,0 +1,2546 @@
+[
+	{
+		"element": "丿",
+		"names": [
+			"katakana no radical (no. 4)"
+		]
+	},
+	{
+		"element": "亠",
+		"names": [
+			"kettle lid radical (no. 8)"
+		]
+	},
+	{
+		"element": "亻",
+		"names": [
+			"radical number 9"
+		]
+	},
+	{
+		"element": "丶",
+		"names": [
+			"dot radical (no. 3)",
+			"tick radical (no. 3)",
+			"dot"
+		]
+	},
+	{
+		"element": "冖",
+		"names": [
+			"wa-shaped crown radical (no. 14)"
+		]
+	},
+	{
+		"element": "氵",
+		"names": [
+			"water radical (no. 85)",
+			"water"
+		]
+	},
+	{
+		"element": "丨",
+		"names": [
+			"rod radical (no. 2)",
+			"number one",
+			"line"
+		]
+	},
+	{
+		"element": "儿",
+		"names": [
+			"legs radical (no. 10)"
+		]
+	},
+	{
+		"element": "㇟",
+		"names": [
+			"vertical curved hook"
+		]
+	},
+	{
+		"element": "扌",
+		"names": [
+			"hand radical (no. 64)",
+			"hand"
+		]
+	},
+	{
+		"element": "厂",
+		"names": [
+			"trailing cliff radical (no. 27)",
+			"wild goose"
+		]
+	},
+	{
+		"element": "冂",
+		"names": [
+			"upside-down box radical (no. 13)"
+		]
+	},
+	{
+		"element": "幺",
+		"names": [
+			"short thread radical (no. 52)"
+		]
+	},
+	{
+		"element": "亅",
+		"names": [
+			"barb radical (no. 6)",
+			"feathered stick"
+		]
+	},
+	{
+		"element": "艹",
+		"names": [
+			"grass radical (no. 140)"
+		]
+	},
+	{
+		"element": "厶",
+		"names": [
+			"katakana mu radical (no. 28)",
+			"I",
+			"myself"
+		]
+	},
+	{
+		"element": "𠆢",
+		"names": [
+			"top \"person\" radical"
+		]
+	},
+	{
+		"element": "宀",
+		"names": [
+			"katakana u radical (no. 40)",
+			"shaped crown"
+		]
+	},
+	{
+		"element": "乂",
+		"names": [
+			"mow",
+			"cut grass",
+			"subdue"
+		]
+	},
+	{
+		"element": "卜",
+		"names": [
+			"divination or katakana to radical (no. 25)",
+			"divining",
+			"fortune-telling"
+		]
+	},
+	{
+		"element": "弋",
+		"names": [
+			"ceremony radical (no. 56)",
+			"piling"
+		]
+	},
+	{
+		"element": "⻌",
+		"names": [
+			"road (radical)"
+		]
+	},
+	{
+		"element": "䒑",
+		"names": [
+			"grass radical (variant)"
+		]
+	},
+	{
+		"element": "廾",
+		"names": [
+			"twenty or letter H radical (no. 55)",
+			"twenty"
+		]
+	},
+	{
+		"element": "匕",
+		"names": [
+			"spoon or katakana hi radical (no. 21)",
+			"spoon"
+		]
+	},
+	{
+		"element": "戈",
+		"names": [
+			"tasselled spear radical (no. 62)",
+			"halberd",
+			"arms",
+			"festival car",
+			"float"
+		]
+	},
+	{
+		"element": "灬",
+		"names": [
+			"fire radical (no. 86)",
+			"fire"
+		]
+	},
+	{
+		"element": "㇇",
+		"names": [
+			"horizontal + left-falling"
+		]
+	},
+	{
+		"element": "勹",
+		"names": [
+			"wrapping radical (no. 20)",
+			"wrapping enclosure"
+		]
+	},
+	{
+		"element": "刂",
+		"names": [
+			"standing sword radical (no. 18)",
+			"knife"
+		]
+	},
+	{
+		"element": "尸",
+		"names": [
+			"flag radical (no. 44)",
+			"corpse",
+			"remains"
+		]
+	},
+	{
+		"element": "⺕",
+		"names": [
+			"snout"
+		]
+	},
+	{
+		"element": "夂",
+		"names": [
+			"winter radical (no. 34)",
+			"late",
+			"delayed"
+		]
+	},
+	{
+		"element": "攵",
+		"names": [
+			"folding chair radical variant (no. 66)",
+			"strike",
+			"hit"
+		]
+	},
+	{
+		"element": "隹",
+		"names": [
+			"old bird radical (no. 172)",
+			"bird"
+		]
+	},
+	{
+		"element": "囗",
+		"names": [
+			"box radical (no. 31)",
+			"enclosure radical (no. 31)",
+			"box"
+		]
+	},
+	{
+		"element": "广",
+		"names": [
+			"dotted cliff radical (no. 53)"
+		]
+	},
+	{
+		"element": "禾",
+		"names": [
+			"two-branch tree radical (no. 115)"
+		]
+	},
+	{
+		"element": "几",
+		"names": [
+			"table or windy radical (no. 16)",
+			"table",
+			"table enclosure"
+		]
+	},
+	{
+		"element": "𠂊",
+		"names": [
+			"knife (radical, variant)"
+		]
+	},
+	{
+		"element": "冫",
+		"names": [
+			"two-stroke water radical (no. 15)",
+			"ice radical (no. 15)"
+		]
+	},
+	{
+		"element": "⻖",
+		"names": [
+			"mound",
+			"hill"
+		]
+	},
+	{
+		"element": "忄",
+		"names": [
+			"standing heart radical variant (no. 61)",
+			"heart"
+		]
+	},
+	{
+		"element": "𠂉",
+		"names": [
+			"person (radical)",
+			"gun"
+		]
+	},
+	{
+		"element": "彳",
+		"names": [
+			"going man radical (no. 60)",
+			"stop",
+			"linger",
+			"loiter"
+		]
+	},
+	{
+		"element": "廿",
+		"names": [
+			"twenty"
+		]
+	},
+	{
+		"element": "𧘇",
+		"names": [
+			"scarf (radical)"
+		]
+	},
+	{
+		"element": "⺤",
+		"names": [
+			"claw (radical)"
+		]
+	},
+	{
+		"element": "卩",
+		"names": [
+			"seal radical (no. 26)"
+		]
+	},
+	{
+		"element": "艮",
+		"names": [
+			"good radical (no. 138)",
+			"northeast (Oriental zodiac)",
+			"stopping"
+		]
+	},
+	{
+		"element": "凵",
+		"names": [
+			"open box radical (no. 17)",
+			"open box enclosure"
+		]
+	},
+	{
+		"element": "頁",
+		"names": [
+			"page",
+			"leaf"
+		]
+	},
+	{
+		"element": "⺷",
+		"names": [
+			"Kangxi radical 123"
+		]
+	},
+	{
+		"element": "罒",
+		"names": [
+			"net radical variant (no. 122)"
+		]
+	},
+	{
+		"element": "龶",
+		"names": [
+			"blue prefix"
+		]
+	},
+	{
+		"element": "龷",
+		"names": [
+			"together (primitive)"
+		]
+	},
+	{
+		"element": "⺍",
+		"names": [
+			"owl (primitive)"
+		]
+	},
+	{
+		"element": "マ",
+		"names": [
+			"ma (radical)"
+		]
+	},
+	{
+		"element": "龰",
+		"names": [
+			"foot (radical)"
+		]
+	},
+	{
+		"element": "殳",
+		"names": [
+			"windy-again radical (no. 79)",
+			"pike"
+		]
+	},
+	{
+		"element": "酉",
+		"names": [
+			"sake radical (no. 164)",
+			"west",
+			"bird",
+			"sign of the bird",
+			"5-7PM",
+			"tenth sign of Chinese zodiac"
+		]
+	},
+	{
+		"element": "彡",
+		"names": [
+			"short hair or fur radical (no. 59)",
+			"three",
+			"hair ornament"
+		]
+	},
+	{
+		"element": "⺌",
+		"names": [
+			"small (primitive)"
+		]
+	},
+	{
+		"element": "疒",
+		"names": [
+			"sick radical (no. 104)",
+			"trailing sickness"
+		]
+	},
+	{
+		"element": "疋",
+		"names": [
+			"head",
+			"counter for animals"
+		]
+	},
+	{
+		"element": "氺",
+		"names": [
+			"water radical variant (no. 85)"
+		]
+	},
+	{
+		"element": "耂",
+		"names": [
+			"variant of radical 125"
+		]
+	},
+	{
+		"element": "⻏",
+		"names": [
+			"capital city (radical)"
+		]
+	},
+	{
+		"element": "豕",
+		"names": [
+			"pig radical (no. 152)",
+			"pig",
+			"hog"
+		]
+	},
+	{
+		"element": "匸",
+		"names": [
+			"hiding enclosure radical (no. 23)"
+		]
+	},
+	{
+		"element": "⺨",
+		"names": [
+			"left \"dog\" radical"
+		]
+	},
+	{
+		"element": "礻",
+		"names": [
+			"showing radical (no. 113)",
+			"cult"
+		]
+	},
+	{
+		"element": "毋",
+		"names": [
+			"mother radical (no. 80)",
+			"do not",
+			"must not",
+			"be not"
+		]
+	},
+	{
+		"element": "业",
+		"names": [
+			"north (alternative)"
+		]
+	},
+	{
+		"element": "匚",
+		"names": [
+			"box-on-side enclosure radical (no. 22)"
+		]
+	},
+	{
+		"element": "覀",
+		"names": [
+			"west radical (no. 146)"
+		]
+	},
+	{
+		"element": "衤",
+		"names": [
+			"clothing radical (no. 145",
+			"clothes"
+		]
+	},
+	{
+		"element": "歹",
+		"names": [
+			"death radical (n. 78)",
+			"bare bone",
+			"bad",
+			"wrong"
+		]
+	},
+	{
+		"element": "勿",
+		"names": [
+			"not",
+			"must not",
+			"do not",
+			"be not"
+		]
+	},
+	{
+		"element": "甫",
+		"names": [
+			"for the first time",
+			"not until"
+		]
+	},
+	{
+		"element": "虍",
+		"names": [
+			"tiger or tiger crown radical (no. 141)",
+			"tiger spots",
+			"mottled"
+		]
+	},
+	{
+		"element": "云",
+		"names": [
+			"say"
+		]
+	},
+	{
+		"element": "从",
+		"names": [
+			"two people"
+		]
+	},
+	{
+		"element": "飠",
+		"names": [
+			"radical number 184",
+			"eat",
+			"food"
+		]
+	},
+	{
+		"element": "禸",
+		"names": [
+			"footprint radical (no. 114)",
+			"rump"
+		]
+	},
+	{
+		"element": "亦",
+		"names": [
+			"also",
+			"again"
+		]
+	},
+	{
+		"element": "㔾",
+		"names": [
+			"fingerprint"
+		]
+	},
+	{
+		"element": "廴",
+		"names": [
+			"long stride or stretching radical (no. 54)"
+		]
+	},
+	{
+		"element": "聿",
+		"names": [
+			"writing brush radical (no. 129)",
+			"brush",
+			"finally",
+			"self",
+			"relate",
+			"follow",
+			"here",
+			"fast"
+		]
+	},
+	{
+		"element": "莫",
+		"names": [
+			"must not",
+			"do not",
+			"be not"
+		]
+	},
+	{
+		"element": "戍",
+		"names": [
+			"protection"
+		]
+	},
+	{
+		"element": "屮",
+		"names": [
+			"old grass radical (no. 45)",
+			"left hand"
+		]
+	},
+	{
+		"element": "𡗗",
+		"names": [
+			"music (primitive)"
+		]
+	},
+	{
+		"element": "⺦",
+		"names": [
+			"radical 90 (simplified)"
+		]
+	},
+	{
+		"element": "辰",
+		"names": [
+			"shin dragon radical (no. 161)",
+			"sign of the dragon",
+			"7-9AM",
+			"fifth sign of Chinese zodiac"
+		]
+	},
+	{
+		"element": "壬",
+		"names": [
+			"9th calendar sign"
+		]
+	},
+	{
+		"element": "昜",
+		"names": [
+			"open",
+			"sun"
+		]
+	},
+	{
+		"element": "允",
+		"names": [
+			"license",
+			"sincerity",
+			"permit"
+		]
+	},
+	{
+		"element": "夭",
+		"names": [
+			"early death",
+			"calamity"
+		]
+	},
+	{
+		"element": "卉",
+		"names": [
+			"grass"
+		]
+	},
+	{
+		"element": "其",
+		"names": [
+			"that"
+		]
+	},
+	{
+		"element": "兌",
+		"names": [
+			"exchange"
+		]
+	},
+	{
+		"element": "圭",
+		"names": [
+			"square jewel",
+			"corner",
+			"angle",
+			"edge"
+		]
+	},
+	{
+		"element": "而",
+		"names": [
+			"and yet",
+			"and then",
+			"but",
+			"however",
+			"nevertheless"
+		]
+	},
+	{
+		"element": "𠦝",
+		"names": [
+			"mist (primitive)"
+		]
+	},
+	{
+		"element": "咅",
+		"names": [
+			"to spit out"
+		]
+	},
+	{
+		"element": "曷",
+		"names": [
+			"why",
+			"how",
+			"when"
+		]
+	},
+	{
+		"element": "丰",
+		"names": [
+			"abundant",
+			"lush",
+			"bountiful",
+			"plenty",
+			"fat face",
+			"luxurious growth of grass"
+		]
+	},
+	{
+		"element": "戋",
+		"names": [
+			"harm (simplified)"
+		]
+	},
+	{
+		"element": "乍",
+		"names": [
+			"though",
+			"notwithstanding",
+			"while",
+			"during",
+			"both",
+			"all"
+		]
+	},
+	{
+		"element": "开",
+		"names": [
+			"open",
+			"initiate",
+			"begin",
+			"start"
+		]
+	},
+	{
+		"element": "兀",
+		"names": [
+			"high & level",
+			"lofty",
+			"bald",
+			"dangerous"
+		]
+	},
+	{
+		"element": "亥",
+		"names": [
+			"sign of the hog",
+			"9-11PM",
+			"twelfth sign of the Chinese zodiac"
+		]
+	},
+	{
+		"element": "啇",
+		"names": [
+			"the stalk",
+			"the stem",
+			"the foot",
+			"the base"
+		]
+	},
+	{
+		"element": "韋",
+		"names": [
+			"tanned leather radical (no. 178)"
+		]
+	},
+	{
+		"element": "㑒",
+		"names": [
+			"all together (simplified)"
+		]
+	},
+	{
+		"element": "冉",
+		"names": [
+			"red",
+			"tan"
+		]
+	},
+	{
+		"element": "圣",
+		"names": [
+			"holy",
+			"sacred"
+		]
+	},
+	{
+		"element": "巴",
+		"names": [
+			"comma-design"
+		]
+	},
+	{
+		"element": "复",
+		"names": [
+			"return",
+			"repeat",
+			"repeatedly"
+		]
+	},
+	{
+		"element": "兪",
+		"names": [
+			"affirmative response",
+			"relaxed",
+			"at ease"
+		]
+	},
+	{
+		"element": "釆",
+		"names": [
+			"topped rice radical (no. 165)",
+			"separate",
+			"divide"
+		]
+	},
+	{
+		"element": "卯",
+		"names": [
+			"sign of the hare or rabbit",
+			"fourth sign of Chinese zodiac",
+			"5-7AM",
+			"east"
+		]
+	},
+	{
+		"element": "并",
+		"names": [
+			"put together"
+		]
+	},
+	{
+		"element": "彑",
+		"names": [
+			"pig's head radical variant (no. 58)"
+		]
+	},
+	{
+		"element": "癶",
+		"names": [
+			"dotted tent radical (no. 105)"
+		]
+	},
+	{
+		"element": "勺",
+		"names": [
+			"ladle",
+			"one tenth of a go",
+			"dip"
+		]
+	},
+	{
+		"element": "㐮",
+		"names": [
+			"to help",
+			"to assist",
+			"to achieve",
+			"to rise",
+			"to raise"
+		]
+	},
+	{
+		"element": "也",
+		"names": [
+			"to be (classical)"
+		]
+	},
+	{
+		"element": "卆",
+		"names": [
+			"soldier",
+			"private",
+			"die"
+		]
+	},
+	{
+		"element": "爰",
+		"names": [
+			"lead on to",
+			"therefore",
+			"then"
+		]
+	},
+	{
+		"element": "咼",
+		"names": [
+			"crooked mouth",
+			"evil",
+			"dishonest"
+		]
+	},
+	{
+		"element": "冓",
+		"names": [
+			"put together",
+			"inner palace"
+		]
+	},
+	{
+		"element": "𢆉",
+		"names": [
+			"pierce (primitive)"
+		]
+	},
+	{
+		"element": "舛",
+		"names": [
+			"dancing radical (no. 136)"
+		]
+	},
+	{
+		"element": "𢦏",
+		"names": [
+			"to cut",
+			"wound",
+			"hurt"
+		]
+	},
+	{
+		"element": "乃",
+		"names": [
+			"from",
+			"possessive particle",
+			"whereupon",
+			"accordingly"
+		]
+	},
+	{
+		"element": "喿",
+		"names": [
+			"chirping of birds"
+		]
+	},
+	{
+		"element": "畐",
+		"names": [
+			"to fill",
+			"roll of cloth"
+		]
+	},
+	{
+		"element": "禺",
+		"names": [
+			"long-tailed monkey"
+		]
+	},
+	{
+		"element": "辟",
+		"names": [
+			"false",
+			"punish",
+			"crime",
+			"law"
+		]
+	},
+	{
+		"element": "⺗",
+		"names": [
+			"heart variant (shitagokoro)"
+		]
+	},
+	{
+		"element": "旡",
+		"names": [
+			"crooked heaven radical variant (no.71)",
+			"sob",
+			"choke"
+		]
+	},
+	{
+		"element": "酋",
+		"names": [
+			"chieftain"
+		]
+	},
+	{
+		"element": "夋",
+		"names": [
+			"dawdle (primitive)"
+		]
+	},
+	{
+		"element": "戌",
+		"names": [
+			"sign of the dog",
+			"7-9PM",
+			"eleventh sign of Chinese zodiac"
+		]
+	},
+	{
+		"element": "夹",
+		"names": [
+			"come (variant)"
+		]
+	},
+	{
+		"element": "巛",
+		"names": [
+			"curving river radical (no.47)"
+		]
+	},
+	{
+		"element": "侖",
+		"names": [
+			"think",
+			"be methodical"
+		]
+	},
+	{
+		"element": "劦",
+		"names": [
+			"exertion (primitive)"
+		]
+	},
+	{
+		"element": "𠔉",
+		"names": [
+			"ticket (primitive)"
+		]
+	},
+	{
+		"element": "蒦",
+		"names": [
+			"to measure",
+			"to calculate"
+		]
+	},
+	{
+		"element": "夆",
+		"names": [
+			"resist"
+		]
+	},
+	{
+		"element": "敝",
+		"names": [
+			"be worn-out",
+			"be dilapidated",
+			"be defeated"
+		]
+	},
+	{
+		"element": "苟",
+		"names": [
+			"any",
+			"at all",
+			"in the least"
+		]
+	},
+	{
+		"element": "尤",
+		"names": [
+			"reasonable",
+			"just",
+			"natural",
+			"superb",
+			"outstanding",
+			"plausible"
+		]
+	},
+	{
+		"element": "尢",
+		"names": [
+			"crooked-big radical (no. 43)"
+		]
+	},
+	{
+		"element": "㕣",
+		"names": [
+			"a marsh at the foot of the hills",
+			"name of a river"
+		]
+	},
+	{
+		"element": "尹",
+		"names": [
+			"an official rank"
+		]
+	},
+	{
+		"element": "咸",
+		"names": [
+			"all",
+			"same"
+		]
+	},
+	{
+		"element": "豸",
+		"names": [
+			"badger or clawed dog radical (no. 153)",
+			"snake",
+			"legless insect"
+		]
+	},
+	{
+		"element": "丂",
+		"names": [
+			"obstruction of breath (qi) as it seeks release",
+			"variant of other characters"
+		]
+	},
+	{
+		"element": "亢",
+		"names": [
+			"high spirits"
+		]
+	},
+	{
+		"element": "夗",
+		"names": [
+			"tossing and turning"
+		]
+	},
+	{
+		"element": "隶",
+		"names": [
+			"slave radical (no. 171)",
+			"extend",
+			"give",
+			"cast"
+		]
+	},
+	{
+		"element": "帚",
+		"names": [
+			"broom"
+		]
+	},
+	{
+		"element": "丗",
+		"names": [
+			"thirty"
+		]
+	},
+	{
+		"element": "卅",
+		"names": [
+			"thirty"
+		]
+	},
+	{
+		"element": "亘",
+		"names": [
+			"span",
+			"range",
+			"extend over"
+		]
+	},
+	{
+		"element": "电",
+		"names": [
+			"tortoise (primitive)"
+		]
+	},
+	{
+		"element": "屰",
+		"names": [
+			"disobedient"
+		]
+	},
+	{
+		"element": "辶",
+		"names": [
+			"road radical variant (no. 162)",
+			"walk",
+			"walking"
+		]
+	},
+	{
+		"element": "耒",
+		"names": [
+			"three-branch tree radical (no. 127)",
+			"come",
+			"plough"
+		]
+	},
+	{
+		"element": "扁",
+		"names": [
+			"level",
+			"small"
+		]
+	},
+	{
+		"element": "氐",
+		"names": [
+			"name of an ancient tribe"
+		]
+	},
+	{
+		"element": "賁",
+		"names": [
+			"decorate"
+		]
+	},
+	{
+		"element": "甬",
+		"names": [
+			"road with walls on both sides"
+		]
+	},
+	{
+		"element": "戠",
+		"names": [
+			"sword",
+			"potter's clay",
+			"to gather"
+		]
+	},
+	{
+		"element": "兹",
+		"names": [
+			"present (primitive)"
+		]
+	},
+	{
+		"element": "袁",
+		"names": [
+			"long kimono"
+		]
+	},
+	{
+		"element": "乡",
+		"names": [
+			"township (primitive)"
+		]
+	},
+	{
+		"element": "乇",
+		"names": [
+			"to depend on",
+			"to entrust with"
+		]
+	},
+	{
+		"element": "⻞",
+		"names": [
+			"eat (primitive)"
+		]
+	},
+	{
+		"element": "𠂤",
+		"names": [
+			"to store up",
+			"to pile up"
+		]
+	},
+	{
+		"element": "于",
+		"names": [
+			"going",
+			"from"
+		]
+	},
+	{
+		"element": "奚",
+		"names": [
+			"servant",
+			"what",
+			"why"
+		]
+	},
+	{
+		"element": "夬",
+		"names": [
+			"decide",
+			"determine",
+			"archery glove"
+		]
+	},
+	{
+		"element": "爻",
+		"names": [
+			"double X radical (no. 89)",
+			"to mix with",
+			"to associate with",
+			"to join"
+		]
+	},
+	{
+		"element": "奐",
+		"names": [
+			"clear",
+			"bright"
+		]
+	},
+	{
+		"element": "尭",
+		"names": [
+			"high",
+			"far"
+		]
+	},
+	{
+		"element": "菐",
+		"names": [
+			"manservant (primitive)"
+		]
+	},
+	{
+		"element": "丩",
+		"names": [
+			"to join or connect the vine"
+		]
+	},
+	{
+		"element": "彔",
+		"names": [
+			"to carve wood"
+		]
+	},
+	{
+		"element": "戊",
+		"names": [
+			"5th calendar sign"
+		]
+	},
+	{
+		"element": "䍃",
+		"names": [
+			"a vase",
+			"a pitcher",
+			"earthenware"
+		]
+	},
+	{
+		"element": "㐬",
+		"names": [
+			"a cup with pendants",
+			"a pennant",
+			"wild",
+			"barren",
+			"uncultivated"
+		]
+	},
+	{
+		"element": "寉",
+		"names": [
+			"crane (bird)"
+		]
+	},
+	{
+		"element": "吾",
+		"names": [
+			"I",
+			"my",
+			"our",
+			"one's own"
+		]
+	},
+	{
+		"element": "禹",
+		"names": [
+			"name of a Chinese emperor"
+		]
+	},
+	{
+		"element": "鬲",
+		"names": [
+			"tripod"
+		]
+	},
+	{
+		"element": "荅",
+		"names": [
+			"adzuki beans",
+			"thick"
+		]
+	},
+	{
+		"element": "关",
+		"names": [
+			"frontier pass",
+			"close",
+			"relation"
+		]
+	},
+	{
+		"element": "睘",
+		"names": [
+			"round",
+			"stare"
+		]
+	},
+	{
+		"element": "喬",
+		"names": [
+			"high",
+			"boasting"
+		]
+	},
+	{
+		"element": "呑",
+		"names": [
+			"drink"
+		]
+	},
+	{
+		"element": "坐",
+		"names": [
+			"sit"
+		]
+	},
+	{
+		"element": "或",
+		"names": [
+			"some",
+			"one",
+			"or",
+			"possibly",
+			"a certain"
+		]
+	},
+	{
+		"element": "埶",
+		"names": [
+			"art"
+		]
+	},
+	{
+		"element": "尓",
+		"names": [
+			"you",
+			"that"
+		]
+	},
+	{
+		"element": "瓜",
+		"names": [
+			"melon"
+		]
+	},
+	{
+		"element": "弗",
+		"names": [
+			"dollar"
+		]
+	},
+	{
+		"element": "佰",
+		"names": [
+			"hundred",
+			"leader of 100 men",
+			"east-west path between paddies"
+		]
+	},
+	{
+		"element": "帛",
+		"names": [
+			"cloth"
+		]
+	},
+	{
+		"element": "叟",
+		"names": [
+			"old person"
+		]
+	},
+	{
+		"element": "曼",
+		"names": [
+			"wide",
+			"beautiful"
+		]
+	},
+	{
+		"element": "㳟",
+		"names": [
+			"violent (primitive)"
+		]
+	},
+	{
+		"element": "尞",
+		"names": [
+			"fuel used for sacrifices"
+		]
+	},
+	{
+		"element": "陏",
+		"names": [
+			"melon",
+			"wrap"
+		]
+	},
+	{
+		"element": "朋",
+		"names": [
+			"companion",
+			"friend"
+		]
+	},
+	{
+		"element": "𠂢",
+		"names": [
+			"to branch"
+		]
+	},
+	{
+		"element": "劵",
+		"names": [
+			"become fatigued",
+			"stop"
+		]
+	},
+	{
+		"element": "朔",
+		"names": [
+			"conjunction (astronomy)",
+			"first day of month",
+			"north"
+		]
+	},
+	{
+		"element": "娄",
+		"names": [
+			"surname",
+			"constellation",
+			"to wear"
+		]
+	},
+	{
+		"element": "朮",
+		"names": [
+			"a type of millet",
+			"a type of herb"
+		]
+	},
+	{
+		"element": "朿",
+		"names": [
+			"thorn"
+		]
+	},
+	{
+		"element": "呆",
+		"names": [
+			"be amazed",
+			"disgusted",
+			"shocked"
+		]
+	},
+	{
+		"element": "冘",
+		"names": [
+			"to move on",
+			"doubtful"
+		]
+	},
+	{
+		"element": "㓁",
+		"names": [
+			"radical 122",
+			"a net",
+			"net-like"
+		]
+	},
+	{
+		"element": "宓",
+		"names": [
+			"quiet",
+			"silent",
+			"in good health"
+		]
+	},
+	{
+		"element": "攸",
+		"names": [
+			"relaxed",
+			"at ease",
+			"place"
+		]
+	},
+	{
+		"element": "尃",
+		"names": [
+			"to state to",
+			"to announce"
+		]
+	},
+	{
+		"element": "溥",
+		"names": [
+			"far and wide"
+		]
+	},
+	{
+		"element": "此",
+		"names": [
+			"this",
+			"current",
+			"next",
+			"coming",
+			"last",
+			"past"
+		]
+	},
+	{
+		"element": "竟",
+		"names": [
+			"end",
+			"finally"
+		]
+	},
+	{
+		"element": "龍",
+		"names": [
+			"dragon",
+			"imperial"
+		]
+	},
+	{
+		"element": "孰",
+		"names": [
+			"which",
+			"how",
+			"who"
+		]
+	},
+	{
+		"element": "孚",
+		"names": [
+			"sincere",
+			"nourish",
+			"encase"
+		]
+	},
+	{
+		"element": "之",
+		"names": [
+			"of",
+			"this"
+		]
+	},
+	{
+		"element": "离",
+		"names": [
+			"rare beast",
+			"strange",
+			"elegant"
+		]
+	},
+	{
+		"element": "卬",
+		"names": [
+			"lofty",
+			"high",
+			"raise",
+			"high-priced"
+		]
+	},
+	{
+		"element": "气",
+		"names": [
+			"steam radical (no. 84)",
+			"spirit"
+		]
+	},
+	{
+		"element": "豦",
+		"names": [
+			"wild boar",
+			"to fight"
+		]
+	},
+	{
+		"element": "窄",
+		"names": [
+			"narrow",
+			"fold",
+			"furl",
+			"shrug",
+			"pucker",
+			"shut",
+			"close"
+		]
+	},
+	{
+		"element": "隼",
+		"names": [
+			"falcon"
+		]
+	},
+	{
+		"element": "卂",
+		"names": [
+			"to fly rapidly"
+		]
+	},
+	{
+		"element": "矣",
+		"names": [
+			"sentence particle"
+		]
+	},
+	{
+		"element": "忝",
+		"names": [
+			"grateful",
+			"indebted"
+		]
+	},
+	{
+		"element": "菫",
+		"names": [
+			"the violet"
+		]
+	},
+	{
+		"element": "絜",
+		"names": [
+			"marking line",
+			"ascertain",
+			"assess",
+			"measure"
+		]
+	},
+	{
+		"element": "彖",
+		"names": [
+			"divination"
+		]
+	},
+	{
+		"element": "逢",
+		"names": [
+			"meeting",
+			"tryst",
+			"date",
+			"rendezvous"
+		]
+	},
+	{
+		"element": "尗",
+		"names": [
+			"younger of brothers",
+			"father's younger brother",
+			"younger brother of a husband"
+		]
+	},
+	{
+		"element": "崔",
+		"names": [
+			"cliff",
+			"bluff",
+			"precipice"
+		]
+	},
+	{
+		"element": "夸",
+		"names": [
+			"boast"
+		]
+	},
+	{
+		"element": "咨",
+		"names": [
+			"investigate"
+		]
+	},
+	{
+		"element": "𦰌",
+		"names": [
+			"small quantity (primitive)"
+		]
+	},
+	{
+		"element": "它",
+		"names": [
+			"other"
+		]
+	},
+	{
+		"element": "蜀",
+		"names": [
+			"green caterpillar",
+			"Szechwan"
+		]
+	},
+	{
+		"element": "洛",
+		"names": [
+			"Kyoto",
+			"the capital"
+		]
+	},
+	{
+		"element": "𦥑",
+		"names": [
+			"clasped hands"
+		]
+	},
+	{
+		"element": "哥",
+		"names": [
+			"big brother"
+		]
+	},
+	{
+		"element": "乎",
+		"names": [
+			"question mark",
+			"?"
+		]
+	},
+	{
+		"element": "赫",
+		"names": [
+			"suddenly",
+			"brighten",
+			"illuminate",
+			"light up"
+		]
+	},
+	{
+		"element": "戉",
+		"names": [
+			"warrior",
+			"arms",
+			"savage",
+			"Ainu"
+		]
+	},
+	{
+		"element": "冢",
+		"names": [
+			"mound",
+			"hillock"
+		]
+	},
+	{
+		"element": "卦",
+		"names": [
+			"a divination sign"
+		]
+	},
+	{
+		"element": "厓",
+		"names": [
+			"precipice",
+			"shore",
+			"bank",
+			"surname",
+			"cliff"
+		]
+	},
+	{
+		"element": "垔",
+		"names": [
+			"to restrain",
+			"to dam a stream and change its direction",
+			"mound"
+		]
+	},
+	{
+		"element": "坴",
+		"names": [
+			"clod of earth",
+			"land"
+		]
+	},
+	{
+		"element": "屏",
+		"names": [
+			"wall",
+			"fence"
+		]
+	},
+	{
+		"element": "涂",
+		"names": [
+			"surname",
+			"name of certain rivers"
+		]
+	},
+	{
+		"element": "匀",
+		"names": [
+			"equal"
+		]
+	},
+	{
+		"element": "夌",
+		"names": [
+			"to dawdle",
+			"the name of the father of the Emperor Yao"
+		]
+	},
+	{
+		"element": "弯",
+		"names": [
+			"curve",
+			"stretching a bow"
+		]
+	},
+	{
+		"element": "壳",
+		"names": [
+			"casing",
+			"shell",
+			"husk"
+		]
+	},
+	{
+		"element": "巷",
+		"names": [
+			"fork in road",
+			"scene",
+			"arena",
+			"theater"
+		]
+	},
+	{
+		"element": "巽",
+		"names": [
+			"southeast"
+		]
+	},
+	{
+		"element": "吊",
+		"names": [
+			"suspend",
+			"hang",
+			"wear (sword)"
+		]
+	},
+	{
+		"element": "乕",
+		"names": [
+			"tiger",
+			"brave",
+			"fierce",
+			"surname"
+		]
+	},
+	{
+		"element": "皃",
+		"names": [
+			"countenance",
+			"appearance"
+		]
+	},
+	{
+		"element": "寅",
+		"names": [
+			"sign of the tiger",
+			"3-5AM",
+			"third sign of Chinese zodiac"
+		]
+	},
+	{
+		"element": "亶",
+		"names": [
+			"truly",
+			"wholly",
+			"cordial"
+		]
+	},
+	{
+		"element": "昌",
+		"names": [
+			"prosperous",
+			"bright",
+			"clear"
+		]
+	},
+	{
+		"element": "叚",
+		"names": [
+			"false"
+		]
+	},
+	{
+		"element": "奄",
+		"names": [
+			"cover",
+			"suffocate",
+			"obstruct"
+		]
+	},
+	{
+		"element": "胡",
+		"names": [
+			"barbarian",
+			"foreign"
+		]
+	},
+	{
+		"element": "胥",
+		"names": [
+			"together",
+			"mutual",
+			"subordinate official"
+		]
+	},
+	{
+		"element": "肙",
+		"names": [
+			"a small worm",
+			"to twist",
+			"to surround",
+			"empty"
+		]
+	},
+	{
+		"element": "䩗",
+		"names": [
+			"hegemony (primitive)"
+		]
+	},
+	{
+		"element": "滕",
+		"names": [
+			"rising water"
+		]
+	},
+	{
+		"element": "彭",
+		"names": [
+			"swelling",
+			"sound of drum"
+		]
+	},
+	{
+		"element": "沓",
+		"names": [
+			"shoes",
+			"boots"
+		]
+	},
+	{
+		"element": "庄",
+		"names": [
+			"level",
+			"in the country",
+			"manor",
+			"village",
+			"hamlet"
+		]
+	},
+	{
+		"element": "粦",
+		"names": [
+			"phosphorus"
+		]
+	},
+	{
+		"element": "楚",
+		"names": [
+			"whip",
+			"cane"
+		]
+	},
+	{
+		"element": "栗",
+		"names": [
+			"chestnut"
+		]
+	},
+	{
+		"element": "桼",
+		"names": [
+			"urushi"
+		]
+	},
+	{
+		"element": "桀",
+		"names": [
+			"measuring box"
+		]
+	},
+	{
+		"element": "亟",
+		"names": [
+			"fast",
+			"quick",
+			"sudden"
+		]
+	},
+	{
+		"element": "枼",
+		"names": [
+			"table",
+			"flat pieces of wood",
+			"slip",
+			"leaf"
+		]
+	},
+	{
+		"element": "澡",
+		"names": [
+			"wash"
+		]
+	},
+	{
+		"element": "鬯",
+		"names": [
+			"fragrant herbs",
+			"spiced liqueur",
+			"grow",
+			"spread"
+		]
+	},
+	{
+		"element": "爾",
+		"names": [
+			"you",
+			"thou",
+			"second person"
+		]
+	},
+	{
+		"element": "忩",
+		"names": [
+			"rush",
+			"hurry",
+			"be flustered"
+		]
+	},
+	{
+		"element": "寍",
+		"names": [
+			"used as a term of comparison"
+		]
+	},
+	{
+		"element": "愈",
+		"names": [
+			"be superior",
+			"heal",
+			"more and more",
+			"increasingly",
+			"finally",
+			"beyond doubt"
+		]
+	},
+	{
+		"element": "昏",
+		"names": [
+			"dark",
+			"evening",
+			"dusk"
+		]
+	},
+	{
+		"element": "显",
+		"names": [
+			"appear (primitive)"
+		]
+	},
+	{
+		"element": "夾",
+		"names": [
+			"insert between"
+		]
+	},
+	{
+		"element": "咢",
+		"names": [
+			"outspokenly"
+		]
+	},
+	{
+		"element": "宁",
+		"names": [
+			"calm",
+			"peaceful",
+			"serene",
+			"healthy"
+		]
+	},
+	{
+		"element": "戎",
+		"names": [
+			"warrior",
+			"arms",
+			"barbarian",
+			"Ainu"
+		]
+	},
+	{
+		"element": "眞",
+		"names": [
+			"truth",
+			"reality",
+			"Buddhist sect"
+		]
+	},
+	{
+		"element": "縣",
+		"names": [
+			"county",
+			"district",
+			"subdivision"
+		]
+	},
+	{
+		"element": "莧",
+		"names": [
+			"edible greens",
+			"amaranth"
+		]
+	},
+	{
+		"element": "舜",
+		"names": [
+			"type of morning glory",
+			"rose of Sharon",
+			"althea"
+		]
+	},
+	{
+		"element": "潘",
+		"names": [
+			"water in which rice has been washed"
+		]
+	},
+	{
+		"element": "甶",
+		"names": [
+			"head of a spirit"
+		]
+	},
+	{
+		"element": "畀",
+		"names": [
+			"to give"
+		]
+	},
+	{
+		"element": "鼡",
+		"names": [
+			"rat",
+			"mouse",
+			"dark gray"
+		]
+	},
+	{
+		"element": "盍",
+		"names": [
+			"come together",
+			"congregate",
+			"meet",
+			"cover"
+		]
+	},
+	{
+		"element": "肋",
+		"names": [
+			"rib"
+		]
+	},
+	{
+		"element": "戔",
+		"names": [
+			"damage",
+			"remain",
+			"slight"
+		]
+	},
+	{
+		"element": "舄",
+		"names": [
+			"a shoe",
+			"the sole of a shoe",
+			"magpie"
+		]
+	},
+	{
+		"element": "躬",
+		"names": [
+			"body",
+			"self"
+		]
+	},
+	{
+		"element": "髟",
+		"names": [
+			"long hair radical (no.190)",
+			"hair hanging long",
+			"mane"
+		]
+	},
+	{
+		"element": "閏",
+		"names": [
+			"intercalation",
+			"illegitimate throne"
+		]
+	},
+	{
+		"element": "闌",
+		"names": [
+			"rise high",
+			"be well along"
+		]
+	},
+	{
+		"element": "柬",
+		"names": [
+			"select",
+			"pick out"
+		]
+	},
+	{
+		"element": "敖",
+		"names": [
+			"play",
+			"be proud"
+		]
+	},
+	{
+		"element": "敫",
+		"names": [
+			"ancient musical instrument"
+		]
+	},
+	{
+		"element": "旉",
+		"names": [
+			"to state to",
+			"to announce"
+		]
+	},
+	{
+		"element": "敕",
+		"names": [
+			"an imperial order or decree"
+		]
+	},
+	{
+		"element": "妾",
+		"names": [
+			"concubine"
+		]
+	},
+	{
+		"element": "旁",
+		"names": [
+			"RHS of character",
+			"at same time"
+		]
+	},
+	{
+		"element": "耑",
+		"names": [
+			"specialized",
+			"concentrated"
+		]
+	},
+	{
+		"element": "冏",
+		"names": [
+			"light",
+			"clear",
+			"bright"
+		]
+	},
+	{
+		"element": "彦",
+		"names": [
+			"lad",
+			"boy (ancient)"
+		]
+	},
+	{
+		"element": "駦",
+		"names": [
+			"馬 plus 6"
+		]
+	},
+	{
+		"element": "龹",
+		"names": [
+			"inflation (primitive)"
+		]
+	},
+	{
+		"element": "孟",
+		"names": [
+			"chief",
+			"beginning"
+		]
+	},
+	{
+		"element": "孛",
+		"names": [
+			"comet",
+			"dark",
+			"obscure"
+		]
+	},
+	{
+		"element": "斿",
+		"names": [
+			"to swim",
+			"to move freely",
+			"to rove"
+		]
+	},
+	{
+		"element": "烝",
+		"names": [
+			"many",
+			"offer",
+			"dedicate",
+			"to steam"
+		]
+	},
+	{
+		"element": "丞",
+		"names": [
+			"help"
+		]
+	},
+	{
+		"element": "罔",
+		"names": [
+			"net"
+		]
+	},
+	{
+		"element": "丑",
+		"names": [
+			"sign of the ox or cow",
+			"1-3AM",
+			"second sign of Chinese zodiac"
+		]
+	},
+	{
+		"element": "羔",
+		"names": [
+			"lamb"
+		]
+	},
+	{
+		"element": "𩵋",
+		"names": [
+			"fish variant"
+		]
+	},
+	{
+		"element": "筑",
+		"names": [
+			"an ancient musical instrument"
+		]
+	},
+	{
+		"element": "匈",
+		"names": [
+			"turmoil",
+			"Hungary"
+		]
+	},
+	{
+		"element": "㇐",
+		"names": [
+			"alone"
+		]
+	},
+	{
+		"element": "夅",
+		"names": [
+			"to descend",
+			"to come down from heaven",
+			"to send down"
+		]
+	},
+	{
+		"element": "㐄",
+		"names": [
+			"wi"
+		]
+	},
+	{
+		"element": "厷",
+		"names": [
+			"the fore-arm",
+			"the upper-arm",
+			"round"
+		]
+	},
+	{
+		"element": "隽",
+		"names": [
+			"superior",
+			"outstanding",
+			"talented"
+		]
+	},
+	{
+		"element": "雍",
+		"names": [
+			"softening",
+			"mitigation"
+		]
+	}
+]
