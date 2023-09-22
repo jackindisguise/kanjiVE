@@ -20,7 +20,6 @@ const jouyou = require("./data/jouyou.json");
 const keywords = require("./data/keywords.json");
 const names = require("./data/names.json");
 const anki = "data/anki-progressive.tsv";
-const list = "list.txt";
 const lines = [];
 
 function findName(element){
@@ -43,15 +42,12 @@ kanjive.sort(function(a,b){
 
 console.log(`Create progressively-ordered flashcard file for anki.`.cyan)
 const usedKeywords = [];
-const _list = [];
 let last;
 for(let kanji of kanjive){
 	if(!keywords[kanji.kanji]){
 		console.log(`${"WARNING".red.bold}: ${kanji.kanji.red} has no keyword!`)
 		continue;
 	}
-	_list.push(kanji.kanji);
-	if(last && kanji.grade !==last.grade) _list.push("\n");
 	if(usedKeywords.contains(keywords[kanji.kanji])) console.log(`${"WARNING".bold.red}: Duplicate keyword ${keywords[kanji.kanji].red}`);
 	else usedKeywords.push(keywords[kanji.kanji]);
 	let named = [];
@@ -66,5 +62,3 @@ for(let kanji of kanjive){
 
 console.log(` ${">".cyan} Saving ${anki.yellow}`);
 fs.writeFileSync(anki, lines.join("\n"));
-
-fs.writeFileSync(list, _list.join(""));
