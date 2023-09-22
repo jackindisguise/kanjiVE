@@ -15,6 +15,7 @@ const jouyou = require("./data/jouyou.json");
 const keywords = require("./data/keywords.json");
 const names = require("./data/names.json");
 const anki = "data/anki.tsv";
+const ankiJSON = "data/anki.json";
 const lines = [];
 
 function findName(element){
@@ -33,6 +34,7 @@ for(let kanji of kanjive){
 
 console.log(`Create kanjiVE-ordered flashcard file for anki.`.cyan)
 const usedKeywords = [];
+const json = [];
 for(let kanji of kanjive){
 	if(!keywords[kanji.kanji]){
 		console.log(`${"WARNING".red.bold}: ${kanji.kanji.red} has no keyword!`)
@@ -43,6 +45,18 @@ for(let kanji of kanjive){
 	let named = [];
 	for(let element of kanji.elements) named.push(`${element}[${findName(element)}]`);
 	let line = [keywords[kanji.kanji], kanji.kanji, `grade${kanji.grade === 7 ? "S" : kanji.grade}`, kanji.frequency, named.join(" ")];
+
+	// json generation
+	let elements = [];
+	for(let element of kanji.elements) elements.push({element:element, name:findName(element)});
+	json.push({
+		kanji: kanji.kanji,
+		keyword: keywords[kanji.kanji],
+		grade: kanji.grade,
+		frequency: kanji.frequency,
+		elements: elements,
+		svg: kanji.kanji !== "𠮟" ? `"<img src=""0${kanji.kanji.charCodeAt().toString(16)}.svg"">"` : ""
+	});
 	/** personal testing stuff */
 	if(kanji.kanji !== "𠮟") line.push(`"<img src=""0${kanji.kanji.charCodeAt().toString(16)}.svg"">"`); /// 𠮟 has no SVG file
 	else line.push("");
@@ -51,3 +65,6 @@ for(let kanji of kanjive){
 
 console.log(` ${">".cyan} Saving ${anki.yellow}`);
 fs.writeFileSync(anki, lines.join("\n"));
+
+console.log(` ${">".cyan} Saving ${ankiJSON.yellow}`);
+fs.writeFileSync(ankiJSON, JSON.stringify(json, null, "\t"));
