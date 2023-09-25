@@ -75,6 +75,7 @@ const jouyou = require("./data/jouyou.json");
 			`# ${table}`,
 			"* Standard ordering of the kanjiVE dataset.",
 			"* Kanji only appear when all of the kanji that they are composed of are shown first.",
+			"* Exception for 一二三四五六七八九十 which are manually introduced first.",
 			"",
 			"| Kanji | Elements |",
 			"| - | - |"
