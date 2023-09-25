@@ -91,6 +91,11 @@ for(let kanji of kanjivg){
 }
 
 console.log(`${cArrow} Sorting kanji by element and type length.`);
+function getKanjiElementLength(kanji){
+	for(let element of kanji.elements){
+
+	}
+}
 kanjivg.sort(function(a,b){
 	return a.elements.length - b.elements.length || a.types.length - b.types.length;
 })
@@ -184,7 +189,7 @@ fs.writeFileSync(outTXT, lines.join("\n"));
 {
 	// save element data separately
 	console.log(`${cArrow} Tracking element usage data.`);
-	const jouyou = require("./data/jouyou.json");
+	const jouyouPlain = require("./data/jouyouPlain.json");
 	const elementsTXT = "data/elements.txt";
 	const elementsJSON = "data/elements.json";
 	const elements = [];
@@ -194,7 +199,7 @@ fs.writeFileSync(outTXT, lines.join("\n"));
 			if(elementsSearch[element]) {
 				elementsSearch[element].appearances.push(kanji.kanji);
 			} else {
-				elementsSearch[element] = {element:element, isJouyouKanji:jouyou.plain.contains(element), appearances:[kanji.kanji]};
+				elementsSearch[element] = {element:element, isJouyouKanji:jouyouPlain.contains(element), appearances:[kanji.kanji]};
 				elements.push(elementsSearch[element]);
 			}
 		}

@@ -15,7 +15,7 @@ const outJSONPath = "data/kanjivg.json";
 const scraped = [];
 console.log(`Converting KanjiVG data to JSON.`.cyan)
 console.log(`${cArrow} Reading ${"Jouyou".blue} kanji data from ${"KanjiVG".green}.`);
-for(let kanji of jouyou.kanji){
+for(let kanji of jouyou){
 	let elements = [];
 	let types = [];
 

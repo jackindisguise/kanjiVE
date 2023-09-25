@@ -1,5 +1,4 @@
-# Progressive Kanji Ordering
-* Progressive ordering of kanji.
+# KanjiVE Ordering
 * Standard ordering of the kanjiVE dataset.
 * Kanji only appear when all of the kanji that they are composed of are shown first.
 

@@ -5,6 +5,7 @@ require("./ext");
 
 // generate kanji-element readme
 console.log(`Generating README files.`.cyan)
+const jouyouPlain = require("./data/jouyouPlain.json");
 const jouyou = require("./data/jouyou.json");
 
 // generate elements readme file
@@ -68,11 +69,10 @@ const jouyou = require("./data/jouyou.json");
 	const sections = [];
 	console.log(`${cArrow} Generating ${progressiveMD.blue}`);
 	{
-		let table = "Progressive Kanji Ordering";
+		let table = "KanjiVE Ordering";
 		console.log(`${cArrow} Generating ${progressiveMD.blue} table: ${table.yellow}`);
 		let lines = [
 			`# ${table}`,
-			"* Progressive ordering of kanji.",
 			"* Standard ordering of the kanjiVE dataset.",
 			"* Kanji only appear when all of the kanji that they are composed of are shown first.",
 			"",
@@ -108,9 +108,9 @@ const jouyou = require("./data/jouyou.json");
 		const kanjive = require("./data/kanjive.json");
 		kanjive.sort(function(a,b){
 			let akan = [];
-			for(let ele of a.elements) if(jouyou.plain.contains(ele)) akan.push(ele);
+			for(let ele of a.elements) if(jouyouPlain.contains(ele)) akan.push(ele);
 			let bkan = [];
-			for(let ele of b.elements) if(jouyou.plain.contains(ele)) bkan.push(ele);
+			for(let ele of b.elements) if(jouyouPlain.contains(ele)) bkan.push(ele);
 			return akan.length - bkan.length || a.elements.length - b.elements.length;
 		});
 		for(let kanji of kanjive) lines.push(`| ${kanji.kanji} | ${kanji.elements.replace(function(a){return `\`${a}\``;}).join(" ")} |`);
@@ -150,7 +150,7 @@ const jouyou = require("./data/jouyou.json");
 		console.log(`${cArrow} Generating ${jouyouMD.blue} table: ${table.yellow}`);
 		let safe = [];
 		let a = 0;
-		for(let kanji of jouyou.kanji) if(kanji.grade === i+1) { safe.push(`\`${kanji.kanji}\``); a++; }
+		for(let kanji of jouyou) if(kanji.grade === i+1) { safe.push(`\`${kanji.kanji}\``); a++; }
 		let lines = [
 			`## ${table}`,
 			`* ${a} out of 2136 Jouyou kanji. (${c+a})`,

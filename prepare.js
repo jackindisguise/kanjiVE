@@ -26,8 +26,11 @@ const cArrow = ` ${">".cyan}`;
 		plain.push(kanji);
 	}
 	const jouyouJSONPath = "data/jouyou.json";
+	const jouyouPlainJSONPath = "data/jouyouPlain.json";
 	console.log(`${cArrow} Saving ${jouyouJSONPath.yellow}`);
-	fs.writeFileSync(jouyouJSONPath, JSON.stringify({kanji:formatted, plain:plain}, null, "\t"));
+	fs.writeFileSync(jouyouJSONPath, JSON.stringify(formatted, null, "\t"));
+	console.log(`${cArrow} Saving ${jouyouPlainJSONPath.yellow}`);
+	fs.writeFileSync(jouyouPlainJSONPath, JSON.stringify(plain));
 }
 
 // convert keywords.txt to keywords.json
