@@ -6,7 +6,6 @@ require("./ext");
 // generate kanji-element readme
 console.log(`Generating README files.`.cyan)
 const jouyou = require("./data/jouyou.json");
-const kanjive = require("./data/kanjive.json");
 
 // generate elements readme file
 {
@@ -63,6 +62,33 @@ const kanjive = require("./data/kanjive.json");
 	fs.writeFileSync(elementsMD, sections.join("\n\n"));
 }
 
+// generate progressive kanji readme file
+{
+	const progressiveMD = "kanjive.md";
+	const sections = [];
+	console.log(`${cArrow} Generating ${progressiveMD.blue}`);
+	{
+		let table = "Progressive Kanji Ordering";
+		console.log(`${cArrow} Generating ${progressiveMD.blue} table: ${table.yellow}`);
+		let lines = [
+			`# ${table}`,
+			"* Progressive ordering of kanji.",
+			"* Standard ordering of the kanjiVE dataset.",
+			"* Kanji only appear when all of the kanji that they are composed of are shown first.",
+			"",
+			"| Kanji | Elements |",
+			"| - | - |"
+		];
+
+		const kanjive = require("./data/kanjive.json");
+		for(let kanji of kanjive) lines.push(`| ${kanji.kanji} | ${kanji.elements.replace(function(a){return `\`${a}\``;}).join(" ")} |`);
+		sections.push(lines.join("\n"));
+	}
+
+	console.log(`${cArrow} Saving ${progressiveMD.blue}`);
+	fs.writeFileSync(progressiveMD, sections.join("\n\n"));
+}
+
 // generate kanji readme file
 {
 	const kanjiMD = "kanji.md";
@@ -79,6 +105,7 @@ const kanjive = require("./data/kanjive.json");
 			"| - | - |"
 		];
 
+		const kanjive = require("./data/kanjive.json");
 		kanjive.sort(function(a,b){
 			let akan = [];
 			for(let ele of a.elements) if(jouyou.plain.contains(ele)) akan.push(ele);
